@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple E-commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🛍 Pink Shop</h1>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </div>
+    </header>
+
+    <main>
+        <div id="product-list" class="products"></div>
+    </main>
+
+    <!-- Product Details Modal -->
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart hidden">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p class="total">Total: ₹<span id="cart-total">0</span></p>
+        <button onclick="checkout()">Place Order</button>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
